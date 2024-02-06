@@ -79,7 +79,7 @@ def new_process():
     if len(sys.argv) > 1:
         in_file = open(sys.argv[1])
         while 1:
-            in_line = in_file.readline()
+            in_line = in_file.readline(5_000_000)
             if in_line == '':
                 break
             else:
